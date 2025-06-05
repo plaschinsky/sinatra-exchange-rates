@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Convert <%= @original_currency %></title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: auto; }
+    a { color: blue; }
+  </style>
+</head>
+<body>
+  <h1>Convert <%= @original_currency %></h1>
+  <p><a href="/">Go back</a>.</p>
+
+  <ul>
+    <% @symbols.each do |code, data| %>
+      <li>
+        <a href="/<%= @original_currency %>/<%= code %>">
+          Convert 1 <%= @original_currency %> to <%= code %>...
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
