@@ -1,0 +1,9 @@
+<h1>Convert <%= @from %> to <%= @to %></h1>
+
+<% if @from == @to %>
+  <p>1 <%= @from %> equals 1 <%= @to %>.</p>
+<% else %>
+  <p>1 <%= @from %> equals <%= @rate %> <%= @to %>.</p>
+<% end %>
+
+<p><a href="/<%= @from %>">Go back</a>.</p>
